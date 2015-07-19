@@ -1,0 +1,30 @@
+<div class="leftBar">
+</div>
+
+</div>
+
+</div> <!-- container -->
+
+<div class="container">
+
+<div class="footer">
+
+	<div class="menuTop">
+
+        
+    </div>  <!-- menuTop -->
+
+    <div style="float: right; margin-right: 5px;">
+		V ${versao}
+	</div>	    
+
+</div> <!-- footer -->
+
+</div> <!-- container -->
+
+<div style="float: left; width: 100%; margin: 5px 0 15px 0;">
+    <fmt:message key="footer.copyright" /> | <fmt:message key="footer.desenvolvido" />.
+</div>
+
+</body>
+</html>

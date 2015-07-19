@@ -1,0 +1,50 @@
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<!-- RESTORE: psql verticil_stallum -h localhost verticil < dumpDDMMAA.sql  -->
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.username">stallum</property>
+		<property name="hibernate.connection.password">stlum</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/stallum</property>
+
+		<property name="hibernate.hbm2ddl.auto">update</property>
+
+		<property name="show_sql">false</property>
+		<property name="format_sql">false</property>
+
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+		<property name="hibernate.connection.autocommit">false</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		
+		<mapping class="stallum.modelo.Usuario" />		
+		<mapping class="stallum.modelo.Endereco" />	
+		<mapping class="stallum.modelo.Empresa" />	
+		<mapping class="stallum.modelo.Funcao" />	
+		<mapping class="stallum.modelo.Dissidio" />	
+		<mapping class="stallum.modelo.Funcionario" />	
+		<mapping class="stallum.modelo.Dependente" />	
+		<mapping class="stallum.modelo.Cliente" />	
+		<mapping class="stallum.modelo.Fornecedor" />	
+		<mapping class="stallum.modelo.DadosGerais" />	
+		<mapping class="stallum.modelo.Encargo" />	
+		<mapping class="stallum.modelo.HorarioTrabalho" />	
+		<mapping class="stallum.modelo.Obra" />	
+		<mapping class="stallum.modelo.Aditivo" />	
+		<mapping class="stallum.modelo.Despesa" />	
+		<mapping class="stallum.modelo.Medicao" />	
+		<mapping class="stallum.modelo.Movimento" />	
+		<mapping class="stallum.modelo.MovimentoObra" />	
+		<mapping class="stallum.modelo.Apontamento" />	
+		<mapping class="stallum.modelo.Ponto" />	
+		<mapping class="stallum.modelo.Bonificacao" />	
+		<mapping class="stallum.modelo.ValeRefeicao" />	
+		<mapping class="stallum.modelo.CentroCusto" />	
+		<mapping class="stallum.modelo.Sindicato" />	
+		<mapping class="stallum.modelo.ContaPagar" />	
+		<mapping class="stallum.modelo.ContaReceber" />	
+		<mapping class="stallum.modelo.ContaCorrente" />	
+		<mapping class="stallum.modelo.MovimentoCaixa" />	
+		<mapping class="stallum.modelo.Pagamento" />	
+		<mapping class="stallum.modelo.Recebimento" />	
+		<mapping class="stallum.modelo.ContaGerencial" />	
+	</session-factory>
+</hibernate-configuration>

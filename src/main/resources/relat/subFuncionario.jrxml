@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.1.final using JasperReports Library version 6.0.0  -->
+<!-- 2015-01-07T17:18:16 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subAditivos" pageWidth="555" pageHeight="842" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="7a126a38-ee8a-48ba-87e3-fccdb4ebbdf6">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Obra"/>
+	<queryString language="xPath">
+		<![CDATA[/XML/PONTO]]>
+	</queryString>
+	<field name="APT_DATA" class="java.lang.String">
+		<fieldDescription><![CDATA[APT_DATA]]></fieldDescription>
+	</field>
+	<field name="APT_OBRA" class="java.lang.String">
+		<fieldDescription><![CDATA[APT_OBRA]]></fieldDescription>
+	</field>
+	<field name="APT_HENTRADA" class="java.lang.String">
+		<fieldDescription><![CDATA[APT_HENTRADA]]></fieldDescription>
+	</field>
+	<field name="APT_HSAIDA" class="java.lang.String">
+		<fieldDescription><![CDATA[APT_HSAIDA]]></fieldDescription>
+	</field>
+	<field name="APT_MOTFALTA" class="java.lang.String">
+		<fieldDescription><![CDATA[APT_MOTFALTA]]></fieldDescription>
+	</field>
+	<field name="APT_MOTABONO" class="java.lang.String">
+		<fieldDescription><![CDATA[APT_MOTABONO]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="30">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="15" uuid="3ed99de6-3039-45a6-8c84-c53772eab788"/>
+				<box>
+					<topPen lineWidth="0.6" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.6" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.6" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.6" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pontos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="15" width="70" height="15" backcolor="#D0D0D0" uuid="3850ca65-4656-4675-ab67-9a77e31b2786"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="220" y="15" width="60" height="15" backcolor="#D0D0D0" uuid="fb47c943-289c-4d5b-bd36-1401d77f854f"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[H/Entrada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="280" y="15" width="60" height="15" backcolor="#D0D0D0" uuid="98aac3ec-a604-43bc-aa30-184aaeb24aa8"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[H/Saída]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="340" y="15" width="60" height="15" backcolor="#D0D0D0" uuid="9d8c20cb-c937-4a17-9953-924d417d84ee"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mot Falta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="400" y="15" width="155" height="15" backcolor="#D0D0D0" uuid="dcb62f2c-a53a-4a24-b9a5-5a9a0b69736d"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Observação]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="70" y="15" width="150" height="15" backcolor="#D0D0D0" uuid="075067bb-9abc-48f9-9942-8ee4562c3164"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Obra/Centro de Custo]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="70" height="15" uuid="c3cd82e0-4b6e-4026-a123-17e973bb08e0"/>
+				<box leftPadding="3" rightPadding="3">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{APT_DATA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="0" width="60" height="15" uuid="fc21e4bd-dc49-47b4-a790-6aad5533f548"/>
+				<box leftPadding="3" rightPadding="3">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{APT_HENTRADA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="0" width="60" height="15" uuid="641d590d-ae48-4de7-83f7-1bd655e6c70e"/>
+				<box leftPadding="3" rightPadding="3">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{APT_HSAIDA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="0" width="60" height="15" uuid="c236000b-1091-4e9e-8a08-cc5018f8a7f9"/>
+				<box leftPadding="3" rightPadding="3">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{APT_MOTFALTA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="400" y="0" width="155" height="15" uuid="889ccdf8-64c2-440e-b782-9ef0a939cc7c"/>
+				<box leftPadding="3" rightPadding="3">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{APT_MOTABONO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="0" width="150" height="15" uuid="0c3156d7-2bb9-4ed4-883c-225b3fd9cffc"/>
+				<box leftPadding="3" rightPadding="3">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{APT_OBRA}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

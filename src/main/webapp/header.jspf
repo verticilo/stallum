@@ -1,0 +1,160 @@
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+
+<head>
+
+	<title>Stallum</title>
+	
+	<link rel="shortcut icon" href="/images/stallum.ico" >
+
+	<link href="<c:url value='/css/stallum.css'/>" rel="stylesheet" type="text/css" media="screen" />
+	<link href="<c:url value='/css/jquery-ui-1.10.3.custom.css'/>" rel="stylesheet" type="text/css" />
+
+	<script src="<c:url value='/js/jquery-1.9.1.js'/>" type="text/javascript"></script>
+	<script src="<c:url value='/js/jquery-ui-1.10.3.custom.js'/>" type="text/javascript"></script>
+	<script src="<c:url value='/js/jquery.validate.js'/>" type="text/javascript"></script>  
+	<script src="<c:url value='/js/jquery.watermark.js'/>" type="text/javascript"></script>  
+	<script src="<c:url value='/js/jquery.mask.min.js'/>" type="text/javascript"></script>  
+	<script src="<c:url value='/js/jquery-stallum.js'/>" type="text/javascript"></script>  
+	<script src="<c:url value='/js/stallum.js'/>" type="text/javascript"></script>  
+	
+	<fmt:setLocale value="pt_br" />
+	<fmt:setBundle basename="messages"/>
+
+</head>
+
+<body>
+
+<div class="header">
+
+<div class="container">
+	<div class="siteLogo">
+		<a href="<c:url value="/"/>" > </a>		
+    </div>
+
+    <div class="menuTop">
+
+        
+    </div>  <!-- menuTop -->
+
+    <div class="menuTop">
+
+       
+    </div>  <!-- menuTop -->
+        
+    <div class="menuTop">
+    
+        
+    </div>  <!-- menuTop -->
+    
+    <div class="menuTop">
+
+		<c:if test="${empty sessaoUsuario or not sessaoUsuario.logado}">
+	        <ul>
+	            <li><b><fmt:message key="header.ola" />, <fmt:message key="header.visitante" />!</b></li>
+	            <li><a href="<c:url value="/login"/>"><fmt:message key="header.login" /></a></li>
+	            <%-- <li><a href="<c:url value="/usuarios/novo"/>"><fmt:message key="header.cadastreSe" /></a></li> --%>
+	        </ul>
+        </c:if>
+        <c:if test="${sessaoUsuario.logado}">
+       		<ul>
+	            <li><b><fmt:message key="header.ola" />, ${sessaoUsuario.nomeCurto}</b></li>
+	            <!-- li><a href="<c:url value="/contato"/>"><fmt:message key="header.contato" /></a></li -->
+	            <li><fmt:message key="header.contato" /></li>
+	            <li><a href="<c:url value="/logout"/>"><fmt:message key="header.logout" /></a></li>
+	        </ul>        	
+        </c:if>
+
+    </div>  <!-- menuTop -->
+    
+</div> <!-- container -->
+
+<c:if test="${sessaoUsuario.logado}">
+
+	<div class="areaParticular">
+	
+		<div class="container">
+		
+			<div class="menuParticular">
+			
+			    <ul>
+			        <li><a href="<c:url value="/usuarios/${sessaoUsuario.idUsuario}/editar"/>"><fmt:message key="header.meuCadastro" /></a></li>
+			    </ul>
+			
+			</div>  <!-- menuParticular -->
+			
+			<div class="menuParticular">
+			
+			    <ul>
+			        <c:if test="${sessaoUsuario.emailConfirmado }"> 
+				        <li><a href="<c:url value="/troca-senha"/>"><fmt:message key="header.trocaSenha" /></a></li>
+			        </c:if>
+			        <c:if test="${not sessaoUsuario.emailConfirmado }"> 
+			        	<li><b><a href="<c:url value="/confirmacao-email"/>"><fmt:message key="header.confirmarEmail" /></a></b></li>
+			        </c:if>
+			    </ul>
+			
+			</div>  <!-- menuParticular -->
+					
+			<c:if test="${sessaoUsuario.administrador}">				
+				<div class="menuParticular">
+				
+				    <ul>
+			        	<li><a href="<c:url value="/usuarios/listar"/>"><fmt:message key="header.usuarios" /></a></li>
+				    </ul>
+				
+				</div>  <!-- menuParticular -->
+				
+				<div class="menuParticular">
+				
+				    <ul>
+			        	<li><a href="<c:url value="/custos/recalcular"/>"><fmt:message key="header.recalcular" /></a></li>
+				    </ul>
+				
+				</div>  <!-- menuParticular -->
+			</c:if>
+			
+		</div>  <!-- container -->
+			
+	</div>  <!-- areaParticular -->
+	
+</c:if>
+
+<div class="messageBox">
+	<div id="messageBox" class="container">
+		<ul>
+			<c:forEach items="${sessaoUsuario.mensagens }" var="mensagem">
+				<li>${mensagem }</li>
+			</c:forEach>
+		</ul>		
+	</div> <!-- container -->
+</div> <!-- messageBox -->
+
+</div> <!-- header -->
+
+<a id="lnkErro" href="#" rel="modal"></a>
+<c:if test="${not empty errors or sessaoUsuario.comErro}">
+	<script>$(document).ready(function() { $('a[rel=modal]').click(); });</script>
+</c:if>
+<div id="erroModal" title="<fmt:message key="alerta" />">
+	<ul>
+		<c:forEach items="${errors }" var="error">
+			<li class="error"><b><fmt:message key="${error.category }" /></b> ${error.message }</li>
+		</c:forEach>
+		<c:forEach items="${sessaoUsuario.erros }" var="erro">
+			<li class="error">${erro}</li>
+		</c:forEach>
+	</ul>
+</div>
+
+<div id="voltarModal" title="<fmt:message key="alerta" />">
+  <p><fmt:message key="voltar.msg" /></p>
+</div>
+
+<div class="container">
+
+<div style="float: left; width: 100%; min-height: 500px;">

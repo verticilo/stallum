@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.1.final using JasperReports Library version 6.0.0  -->
+<!-- 2015-01-06T16:56:19 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subAditivos" pageWidth="555" pageHeight="842" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="7a126a38-ee8a-48ba-87e3-fccdb4ebbdf6">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString language="xPath">
+		<![CDATA[/XML/PONTO]]>
+	</queryString>
+	<field name="APT_NUM" class="java.lang.String">
+		<fieldDescription><![CDATA[APT_NUM]]></fieldDescription>
+	</field>
+	<field name="APT_FUNCIONARIO" class="java.lang.String">
+		<fieldDescription><![CDATA[APT_FUNCIONARIO]]></fieldDescription>
+	</field>
+	<field name="APT_STATUS" class="java.lang.String">
+		<fieldDescription><![CDATA[APT_STATUS]]></fieldDescription>
+	</field>
+	<field name="APT_FALTAS" class="java.lang.String">
+		<fieldDescription><![CDATA[APT_FALTAS]]></fieldDescription>
+	</field>
+	<field name="APT_FERIAS" class="java.lang.String">
+		<fieldDescription><![CDATA[APT_FERIAS]]></fieldDescription>
+	</field>
+	<field name="APT_ABONOS" class="java.lang.String">
+		<fieldDescription><![CDATA[APT_ABONOS]]></fieldDescription>
+	</field>
+	<field name="APT_HEXTRAS" class="java.lang.String">
+		<fieldDescription><![CDATA[APT_HEXTRAS]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="30">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="15" uuid="3ed99de6-3039-45a6-8c84-c53772eab788"/>
+				<box>
+					<topPen lineWidth="0.6" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.6" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.6" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.6" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Funcionários]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="390" y="15" width="35" height="15" backcolor="#D0D0D0" uuid="fb47c943-289c-4d5b-bd36-1401d77f854f"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Faltas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="425" y="15" width="40" height="15" backcolor="#D0D0D0" uuid="98aac3ec-a604-43bc-aa30-184aaeb24aa8"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Férias]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="465" y="15" width="45" height="15" backcolor="#D0D0D0" uuid="9d8c20cb-c937-4a17-9953-924d417d84ee"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Abonos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="30" y="15" width="230" height="15" backcolor="#D0D0D0" uuid="075067bb-9abc-48f9-9942-8ee4562c3164"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Funcionário]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="510" y="15" width="45" height="15" backcolor="#D0D0D0" uuid="56d6508f-b889-4919-8087-f057cea69310"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Desc.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="15" width="30" height="15" backcolor="#D0D0D0" uuid="2658cc69-49bd-402f-aaaf-10ef93116bc8"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="260" y="15" width="130" height="15" backcolor="#D0D0D0" uuid="6c24d829-8575-4130-ac27-9e7d6ee66199"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<textField>
+				<reportElement x="390" y="0" width="35" height="15" uuid="fc21e4bd-dc49-47b4-a790-6aad5533f548"/>
+				<box leftPadding="3" rightPadding="3">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{APT_FALTAS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="425" y="0" width="40" height="15" uuid="641d590d-ae48-4de7-83f7-1bd655e6c70e"/>
+				<box leftPadding="3" rightPadding="3">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{APT_FERIAS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="465" y="0" width="45" height="15" uuid="c236000b-1091-4e9e-8a08-cc5018f8a7f9"/>
+				<box leftPadding="3" rightPadding="3">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{APT_ABONOS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="0" width="230" height="15" uuid="0c3156d7-2bb9-4ed4-883c-225b3fd9cffc"/>
+				<box leftPadding="3" rightPadding="3">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{APT_FUNCIONARIO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="510" y="0" width="45" height="15" uuid="e0782cc1-b441-49b6-a972-7de0845b8813"/>
+				<box leftPadding="3" rightPadding="3">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{APT_HEXTRAS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="30" height="15" uuid="e85cee4b-4f6f-4d00-b937-0d737b54b1c4"/>
+				<box leftPadding="3" rightPadding="3">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{APT_NUM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="0" width="130" height="15" uuid="54fbc9c0-7eb0-43d8-aa3c-5c277d363247"/>
+				<box leftPadding="3" rightPadding="3">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{APT_STATUS}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

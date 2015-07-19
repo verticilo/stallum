@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.1.final using JasperReports Library version 6.0.0  -->
+<!-- 2015-01-09T17:07:54 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="demoObra" pageWidth="595" pageHeight="842" whenNoDataType="BlankPage" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4eedbb89-b4f6-4469-9ab6-f642a1688cf7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="imprimirPontos" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<parameter name="PERIODO" class="java.lang.String"/>
+	<parameter name="DIAS_UTEIS" class="java.lang.String"/>
+	<parameter name="NOME" class="java.lang.String"/>
+	<parameter name="ENDERECO" class="java.lang.String"/>
+	<parameter name="APELIDO" class="java.lang.String"/>
+	<parameter name="EMPRESA" class="java.lang.String"/>
+	<parameter name="FUNCAO" class="java.lang.String"/>
+	<parameter name="SINDICATO" class="java.lang.String"/>
+	<parameter name="DATA_ADMISSAO" class="java.lang.String"/>
+	<parameter name="CENTRO_CUSTO" class="java.lang.String"/>
+	<parameter name="SITUACAO" class="java.lang.String"/>
+	<parameter name="QUANT_DEPEND" class="java.lang.String"/>
+	<parameter name="SALARIO_BASE" class="java.lang.String"/>
+	<parameter name="ANUENIO" class="java.lang.String"/>
+	<parameter name="BONUS" class="java.lang.String"/>
+	<parameter name="ANUENIO_BONUS" class="java.lang.String"/>
+	<parameter name="ENCARGO" class="java.lang.String"/>
+	<parameter name="ENCARGO_BONUS" class="java.lang.String"/>
+	<parameter name="SAL_FAMILIA" class="java.lang.String"/>
+	<parameter name="SAL_HORA" class="java.lang.String"/>
+	<parameter name="SAL_MES" class="java.lang.String"/>
+	<parameter name="ABONOS" class="java.lang.String"/>
+	<parameter name="FALTAS" class="java.lang.String"/>
+	<parameter name="FERIAS" class="java.lang.String"/>
+	<parameter name="PERC_ABONO" class="java.lang.String"/>
+	<parameter name="PERC_FALTA" class="java.lang.String"/>
+	<title>
+		<band height="396" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="190" width="556" height="1" uuid="806ce5df-1219-4876-ae0c-ca7405b1f246">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="350" y="0" width="205" height="20" uuid="e622555d-198b-4ccd-a4a1-c59c53304058">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Funcionário]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="180" height="40" uuid="05df27c0-5f86-4882-a8ff-272020d9e071"/>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR} + "logoSite.png"]]></imageExpression>
+			</image>
+			<textField pattern="">
+				<reportElement x="100" y="67" width="450" height="20" uuid="d150cb48-1914-4a1e-b742-6e99e3bf9df4"/>
+				<textElement verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NOME}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-1" y="67" width="91" height="20" uuid="86df6892-6cc3-4601-8e85-b5e6257a716e"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Funcionário:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="62" width="556" height="1" uuid="e25d8bbb-b2ee-4d60-96d4-4d87b8cf32db">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="290" y="151" width="90" height="15" uuid="665f25c2-8663-4951-b699-1ab863bdeb76"/>
+				<textElement textAlignment="Right">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Centro de Custo:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="136" width="90" height="15" uuid="2d2f365d-7b12-4a8f-990d-ff528a2660bc"/>
+				<textElement textAlignment="Right">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Sindicato:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-1" y="166" width="80" height="15" uuid="dd52166a-1135-4931-adef-51e7972118bc"/>
+				<textElement textAlignment="Right">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Situação:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="136" width="80" height="15" uuid="1d3045ed-03d6-4253-a959-aeeb491b73ca"/>
+				<textElement textAlignment="Right">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Função:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="121" width="80" height="15" uuid="33274f5d-5b7e-4be2-a2ff-65d452a618ed"/>
+				<textElement textAlignment="Right">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Apelido:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="151" width="80" height="15" uuid="235bf8b6-1e1e-49c7-b59f-7a46c30b8209"/>
+				<textElement textAlignment="Right">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Admissão:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="92" width="556" height="1" uuid="048aa2d1-5f1f-4aa8-86b0-13d947bf1bb4">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="290" y="166" width="90" height="15" uuid="78ac027f-a06d-4683-a296-5c400f5af5f3"/>
+				<textElement textAlignment="Right">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Dependentes:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="197" width="180" height="15" uuid="b62092ec-9053-4f27-b387-9b25d2909a68"/>
+				<textElement textAlignment="Right">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Salário Base:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="212" width="180" height="15" uuid="d648205c-922f-4918-b0bc-215f94f57276"/>
+				<textElement textAlignment="Right">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Anuênio (%):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="227" width="180" height="15" uuid="d648205c-922f-4918-b0bc-215f94f57276"/>
+				<textElement textAlignment="Right">
+					<font size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Bônus (PF - %):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="242" width="180" height="15" uuid="d648205c-922f-4918-b0bc-215f94f57276"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="11"/>
+				</textElement>
+				<text><![CDATA[Anuênio (PF - %):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="257" width="180" height="15" uuid="d648205c-922f-4918-b0bc-215f94f57276"/>
+				<textElement textAlignment="Right">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Encargos (%):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="272" width="180" height="15" uuid="d648205c-922f-4918-b0bc-215f94f57276"/>
+				<textElement textAlignment="Right">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Encargos (PF - %):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="287" width="180" height="15" uuid="d648205c-922f-4918-b0bc-215f94f57276"/>
+				<textElement textAlignment="Right">
+					<font size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Salário Família:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="302" width="180" height="15" uuid="d648205c-922f-4918-b0bc-215f94f57276"/>
+				<textElement textAlignment="Right">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Salário/Hora:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="317" width="180" height="15" uuid="d648205c-922f-4918-b0bc-215f94f57276"/>
+				<textElement textAlignment="Right">
+					<font size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Salário/Mês:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="347" width="180" height="15" uuid="d648205c-922f-4918-b0bc-215f94f57276"/>
+				<textElement textAlignment="Right">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Total de faltas no período:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="121" width="190" height="15" uuid="2e5318b2-20f4-41fb-ae87-4be572843c1b"/>
+				<textFieldExpression><![CDATA[$P{APELIDO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="137" width="190" height="15" uuid="6e6c59b3-2cdc-4ba3-b387-6365867ac781"/>
+				<textFieldExpression><![CDATA[$P{FUNCAO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="392" y="136" width="155" height="15" uuid="e5022a11-7a58-46d3-8e3a-0fc0010803e4"/>
+				<textFieldExpression><![CDATA[$P{SINDICATO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="152" width="190" height="15" uuid="98f58691-1157-468f-bbcc-3832a9ccec0c"/>
+				<textFieldExpression><![CDATA[$P{DATA_ADMISSAO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="392" y="151" width="155" height="15" uuid="60e3a5a0-abf1-4990-a327-e7bf3209a258"/>
+				<textFieldExpression><![CDATA[$P{CENTRO_CUSTO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="167" width="190" height="15" uuid="ecb3be6f-1c01-43ac-ac17-1ed129a694d6"/>
+				<textFieldExpression><![CDATA[$P{SITUACAO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="392" y="167" width="155" height="15" uuid="03e92202-2ac9-4c8a-b87c-0b44daf29f4a"/>
+				<textFieldExpression><![CDATA[$P{QUANT_DEPEND}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="197" width="155" height="15" uuid="45582b64-4e44-4ab0-a331-6fe815579a76"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{SALARIO_BASE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="212" width="155" height="15" uuid="45582b64-4e44-4ab0-a331-6fe815579a76"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{ANUENIO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="227" width="155" height="15" uuid="45582b64-4e44-4ab0-a331-6fe815579a76"/>
+				<textElement textAlignment="Right">
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BONUS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="242" width="155" height="15" forecolor="#000000" uuid="45582b64-4e44-4ab0-a331-6fe815579a76"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{ANUENIO_BONUS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="257" width="155" height="15" forecolor="#000000" uuid="45582b64-4e44-4ab0-a331-6fe815579a76"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{ENCARGO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="272" width="155" height="15" forecolor="#000000" uuid="45582b64-4e44-4ab0-a331-6fe815579a76"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{ENCARGO_BONUS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="287" width="155" height="15" forecolor="#000000" uuid="45582b64-4e44-4ab0-a331-6fe815579a76"/>
+				<textElement textAlignment="Right">
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SAL_FAMILIA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="302" width="155" height="15" uuid="45582b64-4e44-4ab0-a331-6fe815579a76"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{SAL_HORA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="317" width="155" height="15" uuid="45582b64-4e44-4ab0-a331-6fe815579a76"/>
+				<textElement textAlignment="Right">
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SAL_MES}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="362" width="155" height="15" uuid="45582b64-4e44-4ab0-a331-6fe815579a76"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{ABONOS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="362" width="180" height="15" uuid="11cd7cfa-2683-4174-80e2-648ce77b2aae"/>
+				<textElement textAlignment="Right">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Total de abonos no período:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="347" width="155" height="15" uuid="6687c196-0ad1-488b-8be2-ae07b0e227da"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{FALTAS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="97" width="80" height="15" uuid="639d66f9-55a7-4219-a67c-d8b0ceb23384"/>
+				<textElement textAlignment="Right">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Endereço:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="97" width="457" height="15" uuid="60518aba-8d51-40be-b675-ba1a9cd7ac3a"/>
+				<textFieldExpression><![CDATA[$P{ENDERECO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="290" y="121" width="90" height="15" uuid="6739b3ef-d1bd-4b05-a956-802b2778abb4"/>
+				<textElement textAlignment="Right">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Empresa:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="392" y="121" width="155" height="15" uuid="ae68918c-3bf7-40e0-bfe0-ec9b1edd9efb"/>
+				<textFieldExpression><![CDATA[$P{EMPRESA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="377" width="155" height="15" uuid="54172834-d927-4a59-8d76-2ba81687ba07"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{FERIAS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="377" width="180" height="15" uuid="6c4659bf-e23a-454c-8b6d-c7566d1eee59"/>
+				<textElement textAlignment="Right">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Total de férias no período:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="42" width="57" height="17" uuid="4454b2bd-3608-470e-ba16-6c5cab8a21c1"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Dias Úteis:]]></text>
+			</staticText>
+			<textField pattern="">
+				<reportElement x="390" y="42" width="164" height="17" uuid="12ca4df8-4608-4e10-bae6-167906efe87b"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{DIAS_UTEIS}]]></textFieldExpression>
+			</textField>
+			<textField pattern="">
+				<reportElement x="390" y="24" width="164" height="17" uuid="50e1d8dc-240a-4cc0-8759-fa1eef3d4a27">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PERIODO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="330" y="24" width="57" height="17" uuid="76c54a05-4e56-44b8-bf43-16c4ed83b757"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Período:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="97" splitType="Stretch">
+			<printWhenExpression><![CDATA[$V{PAGE_NUMBER}.intValue() > 1]]></printWhenExpression>
+			<line>
+				<reportElement x="0" y="93" width="556" height="1" uuid="806ce5df-1219-4876-ae0c-ca7405b1f246">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="350" y="0" width="205" height="20" uuid="e622555d-198b-4ccd-a4a1-c59c53304058">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Funcionário]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="180" height="40" uuid="05df27c0-5f86-4882-a8ff-272020d9e071"/>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR} + "logoSite.png"]]></imageExpression>
+			</image>
+			<textField pattern="">
+				<reportElement x="100" y="68" width="450" height="20" uuid="d150cb48-1914-4a1e-b742-6e99e3bf9df4"/>
+				<textElement verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NOME}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-1" y="68" width="91" height="20" uuid="86df6892-6cc3-4601-8e85-b5e6257a716e"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Funcionário:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="63" width="556" height="1" uuid="e25d8bbb-b2ee-4d60-96d4-4d87b8cf32db">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="330" y="42" width="57" height="17" uuid="1d8d3426-59ff-40ce-88e7-5a40a14898cc"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Dias Úteis:]]></text>
+			</staticText>
+			<textField pattern="">
+				<reportElement x="390" y="42" width="164" height="17" uuid="2c0bd5f6-0821-4690-978d-e8983b2ffa19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{DIAS_UTEIS}]]></textFieldExpression>
+			</textField>
+			<textField pattern="">
+				<reportElement x="390" y="24" width="164" height="17" uuid="940130ec-c076-411f-8af9-67cb5893f36a">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PERIODO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="330" y="24" width="57" height="17" uuid="53839552-b913-4dfa-af70-492e58beca34"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Período:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<printWhenExpression><![CDATA[$P{imprimirPontos} == "S"]]></printWhenExpression>
+			<subreport>
+				<reportElement x="0" y="0" width="554" height="25" uuid="0b7bb560-cdf0-4135-979d-e3c79cde232c"/>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).dataSource("/XML/PONTO")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "subFuncionario.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="27" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="556" height="1" uuid="de013f48-c7a8-424e-ada3-762322ca33c2">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<textField>
+				<reportElement x="440" y="0" width="70" height="20" uuid="19760503-585f-4ff3-92ff-04296ae327a3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Pag. " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="510" y="0" width="44" height="20" uuid="e4ab692a-bb8b-4d20-9ba0-5df6969ebdc8"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[" de " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="0" y="1" width="70" height="20" uuid="993374a8-a661-405a-a6e4-303d1899db11"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("dd/MM/yyyy").format(new java.util.Date())]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

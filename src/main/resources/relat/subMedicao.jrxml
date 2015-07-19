@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.1.final using JasperReports Library version 6.0.0  -->
+<!-- 2015-01-28T10:45:48 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subAditivos" pageWidth="555" pageHeight="842" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="7a126a38-ee8a-48ba-87e3-fccdb4ebbdf6">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Obra"/>
+	<queryString language="xPath">
+		<![CDATA[/XML/MEDICAO]]>
+	</queryString>
+	<field name="MED_DATA" class="java.lang.String">
+		<fieldDescription><![CDATA[MED_DATA]]></fieldDescription>
+	</field>
+	<field name="MED_NF" class="java.lang.String">
+		<fieldDescription><![CDATA[MED_NF]]></fieldDescription>
+	</field>
+	<field name="MED_VALOR" class="java.lang.String">
+		<fieldDescription><![CDATA[MED_VALOR]]></fieldDescription>
+	</field>
+	<field name="MED_ISS" class="java.lang.String">
+		<fieldDescription><![CDATA[MED_ISS]]></fieldDescription>
+	</field>
+	<field name="MED_INSS" class="java.lang.String">
+		<fieldDescription><![CDATA[MED_INSS]]></fieldDescription>
+	</field>
+	<field name="MED_CLSS" class="java.lang.String">
+		<fieldDescription><![CDATA[MED_CLSS]]></fieldDescription>
+	</field>
+	<field name="MED_IRRF" class="java.lang.String">
+		<fieldDescription><![CDATA[MED_IRRF]]></fieldDescription>
+	</field>
+	<field name="MED_ESTORNADO" class="java.lang.String">
+		<fieldDescription><![CDATA[MED_ESTORNADO]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="40">
+			<staticText>
+				<reportElement x="0" y="10" width="555" height="15" uuid="3ed99de6-3039-45a6-8c84-c53772eab788"/>
+				<box>
+					<topPen lineWidth="0.6" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.6" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.6" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.6" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Medições]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="25" width="70" height="15" backcolor="#D0D0D0" uuid="3850ca65-4656-4675-ab67-9a77e31b2786"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="70" y="25" width="110" height="15" backcolor="#D0D0D0" uuid="be59bdbb-e1e0-4dde-a0d6-8dc165a594d4"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nota Fiscal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="420" y="25" width="65" height="15" backcolor="#D0D0D0" uuid="2286f74e-d53f-4792-8687-9ac00def59f7"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[IRRF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="360" y="25" width="60" height="15" backcolor="#D0D0D0" uuid="1be1c90f-513a-49c0-becc-b697fb805213"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CLSS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="300" y="25" width="60" height="15" backcolor="#D0D0D0" uuid="c9e6d417-cbe7-4fc7-a8b2-b53bf544d47b"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INSS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="240" y="25" width="60" height="15" backcolor="#D0D0D0" uuid="68b8301c-7785-4074-9d78-96bdaae53e10"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ISS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="180" y="25" width="60" height="15" backcolor="#D0D0D0" uuid="3e39a01d-f8e4-45ec-baa1-edc378dd7b20"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Valor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="485" y="25" width="70" height="15" backcolor="#D0D0D0" uuid="514837b7-7d04-4e8d-8e58-cc295480b711"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cancelada]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="70" height="15" uuid="c3cd82e0-4b6e-4026-a123-17e973bb08e0"/>
+				<box leftPadding="3" rightPadding="3">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MED_DATA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="0" width="110" height="15" uuid="37f03b2f-7b0f-482d-aefa-9bcb1566fbc2"/>
+				<box leftPadding="3" rightPadding="3">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MED_NF}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="0" width="60" height="15" uuid="26228a55-7ab4-4fd9-852e-3eaf06491563"/>
+				<box leftPadding="3" rightPadding="3">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MED_VALOR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="0" width="60" height="15" uuid="e4edd376-3646-4175-b5b0-bdadd5d7d448"/>
+				<box leftPadding="3" rightPadding="3">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MED_ISS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="60" height="15" uuid="7cefbb7b-4237-4028-bb25-923c8c249471"/>
+				<box leftPadding="3" rightPadding="3">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MED_INSS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="0" width="60" height="15" uuid="715025b2-c159-4240-8ac5-452e401c4a8e"/>
+				<box leftPadding="3" rightPadding="3">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MED_CLSS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="0" width="65" height="15" uuid="00e37720-7c6b-4fff-8055-1aa8571d81a7"/>
+				<box leftPadding="3" rightPadding="3">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MED_IRRF}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="485" y="0" width="70" height="15" uuid="2e8f45cc-ea9c-45c7-b2f7-2306dc698235"/>
+				<box leftPadding="3" rightPadding="3">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MED_ESTORNADO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

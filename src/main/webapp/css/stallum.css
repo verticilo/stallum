@@ -1,0 +1,447 @@
+@CHARSET "UTF-8";
+
+body {
+	height: 100%; 
+	margin: 0;
+	text-align: center;
+	font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #105d8a;
+}
+
+h3, h2 {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-style: italic;
+	margin: 0 0 10px 0;
+	padding: 3px;
+	border-bottom: 1px dotted;
+}
+
+i {
+	font-size: 1.01em;
+	color: #f06609;
+}
+
+hr {
+	height: 1px;
+	border: 0;
+	border-bottom: 1px dotted #d0d0d0;
+}
+
+label {
+	margin: 2px;
+}
+label.error { 
+	float: right;
+	color: red; 
+	font-size: 0.8em;
+	font-weight: normal;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+ol {
+	margin: 0;
+	padding: 0 5px 0 25px;
+}
+
+li {
+	padding: 3px;
+}
+
+a {
+	text-decoration: none;
+	color: #105d8a;
+	border: 0;
+}
+a:hover {
+	text-decoration: underline;
+}
+a img {
+	border: none;
+}
+
+input {
+	margin-bottom: 2px;	
+}
+
+table {
+	width: 100%;
+}
+
+/* --- CONTAINER --- */
+
+.container {
+	width: 940px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+/* --- HEADER --- */
+
+.header {
+	background-color: #ececec;
+}
+.header .siteLogo {
+    float: left;
+    margin: 20px 20px 20px 0;
+}
+.header .siteLogo a {
+    display: block;	
+    width: 250px;
+    height: 50px;
+    background: url("../images/logoSite.jpg") 0 0 no-repeat;
+}
+
+/* --- MENU TOP --- */
+
+.menuTop {
+    float: left;  
+	margin: 10px;
+	min-width: 130px;
+}
+
+/* --- MESSAGE BOX --- */
+
+.messageBox {
+	float: left;
+	width: 100%;
+	padding: 3px;
+	color: #fff;
+	background-color: #105d8a;
+}
+.messageBox a {
+	color: #fff;
+}
+.messageBox .error {
+	color: #f8c300;
+}
+.messageBox .error  a {
+	color: #f8c300;
+}
+
+/* --- AREA PARTICULAR --- */
+
+.areaParticular {
+	float: left;
+	width: 100%;
+	background-color: #ececec;
+}
+.menuParticular {
+	float: left;
+    width: 165px;  
+	margin: 10px 0 10px 23px;
+}
+
+/* --- LEFT BAR --- */
+
+.leftBar {
+	float: left;
+	width: 210px;
+	margin: 10px 5px 10px 0;
+	font-size: 1.01em;
+}
+.leftBar .menuBox {
+    float: left;
+    width: 95%;
+    margin-bottom: 7px;
+    padding: 7px;
+    border-bottom: 1px dotted #d0d0d0;
+    border-top: 3px solid #d0d0d0;
+    background-color: #ececec;
+}
+.leftBar .menuBox .ativo {
+	background-color: #fff;
+}
+.leftBar .box {
+	float: left;
+    width: 95%;
+    margin-bottom: 7px;
+    padding: 7px;
+    border: 1px solid #d0d0d0;
+    text-align: center;
+}
+
+/* --- CONTENT --- */
+
+.home {
+	float: right; 
+	width: 720px; 
+	margin: 10px 0 5px 5px;
+}
+
+.content {
+	float: right; 
+	width: 708px; 
+	margin: 10px 0 5px 5px;
+}
+
+.rightBar {
+    float: right;
+    width: 170px;
+    margin-top: 10px;
+    padding: 0 0 0 5px;
+}
+
+.observacao {
+	font-size: 0.9em;
+}
+
+/* --- FORMULARIO --- */
+	
+.formulario {
+	float: left;
+	width: 98%;
+	margin: 5px 0;
+	padding: 7px;
+	border: 1px solid #d0d0d0;
+	background-color: #ececec;
+}
+.formulario div {
+	width: 100%;
+}
+.formulario input {
+	height: 20px;
+	padding: 3px;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+.formulario input.email {
+	text-transform: lowercase;	
+}
+.formulario select {
+	height: 30px;
+	padding: 3px;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+.formulario .label {
+	text-align: right;
+	vertical-align: top;
+	padding-top: 4px;
+}
+.requerido {
+	font-weight: bold;
+}
+.limiteTexto {
+	font-size: 8pt; 
+	color: #f06609;
+}
+.formulario .validacao {
+	display: none;
+	font-size: 8pt; 
+	color: #f06609;	
+}
+.formulario .obsCampo {
+	font-size: 9pt; 
+}
+.formulario .submit {
+	display: block;
+	margin: 7px;
+}
+.formulario .imgBtn {
+	float: right;
+	min-width: 32px;
+	min-height: 32px;
+	border: 0;
+}
+.formulario .coluna {
+	float: left;
+	width: 48%;
+	height: 47px;
+	padding: 5px;
+}
+.formulario .linha {
+	float: left;
+	width: 96%;
+	height: 47px;
+	padding: 5px;
+}
+.formulario .subColuna {
+	float: left;
+	max-width: 46%;
+	width: auto;
+	margin-right: 7px;
+}
+.formulario .lista {
+	float: left; 
+	border: 1px solid #aaa; 
+	padding: 5px;
+}
+.obrigatorio {
+	font-weight: bold;
+}
+.formulario .obrigatorio span {
+	color: red;
+}
+.formulario .novo {
+	background: url("../images/novo.png") 0 0 no-repeat;
+}
+.formulario .editar {
+	background: url("../images/editar.png") 0 0 no-repeat;
+}
+.formulario .confirmar {
+	background: url("../images/confirmar.png") 0 0 no-repeat;
+}
+.formulario .copiar {
+	background: url("../images/copiar.png") 0 0 no-repeat;
+}
+.formulario .cancelar {
+	background: url("../images/cancelar.png") 0 0 no-repeat;
+}
+.formulario .remover {
+	background: url("../images/remover.png") 0 0 no-repeat;
+}
+.formulario .pesquisar {
+	background: url("../images/pesquisar.png") 0 0 no-repeat;
+}
+.formulario .liquidar {
+	background: url("../images/liquidar.png") 0 0 no-repeat;
+}
+.formulario .relatorio {
+	margin: 2px;
+}
+
+.instrucoes {
+	float: right;
+	margin: 5px 0 5px 5px;
+	padding: 5px;
+}
+
+/* --- LISTAGEM ---*/
+
+.lista div {
+	float: left;
+	width: 99%;
+	padding: 2px;
+}
+.lista .btnFiltro {
+	border: 1px solid #d0d0d0;
+	background-color: #ececec;
+	margin-bottom: 5px;
+}
+.lista .btnFiltro div {
+	width: auto;
+	padding-top: 3px;
+}
+.lista .btnFiltro img {
+	width: 20px;
+	height: 20px;
+	padding-top: 1px;
+}
+.lista .botoes {
+	border: 0;
+	margin-bottom: 5px;
+}
+.lista .botoes div {
+	width: auto;
+	padding-top: 3px;
+}
+.lista .botoes img {
+	width: 16px;
+	height: 16px;
+	padding-top: 1px;
+}
+.lista .botoes .imgBtn {
+	background-color: transparent;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+.lista .cabecalho {
+	border-bottom: 2px solid #ccc; 
+	font-weight: bold;
+}
+.lista .linha {
+	border-bottom: 1px dotted #ccc; 
+	text-transform: uppercase;
+}
+.lista .calApont {
+	float: left;
+	width: 22px;
+	height: 20px;
+	margin: 4px 0;
+	padding: 0;
+	text-align: center;
+	font-size: 0.90em;
+	font-weight: bold;
+	border-bottom: 2px solid #d0d0d0;	
+}
+.lista .diaApont {
+	float: left;
+	width: 21px;
+	height: 21px;
+	margin: 0 1px 1px 0;
+	padding: 0;
+	text-align: center;
+	font-size: 0.90em;
+}
+
+.listaInterna div {
+	float: left;
+	width: 99%;
+	padding: 2px;
+}
+.listaInterna .linha {
+	border-bottom: 1px dotted #ccc; 
+}
+.listaInterna .linha div {
+	width: 45%;
+}
+
+/* --- PAGINACAO --*/
+
+.filtro {
+	float: right;
+	border-left: 2px solid #ccc;
+}
+.filtro button {
+	border: 0;
+	background-color: #ececec;
+	margin: 0;
+	padding: 0;
+}
+.paginacao {
+	border-left: 2px solid #ccc;
+	text-align: center;
+	margin-left: 2px;
+	padding-left: 2px;
+}
+.paginacao input {
+	width: 25px;
+	height: 20px;
+	line-height: 2.3;
+	margin: 0;
+	border: 0;
+}
+
+/* --- RELATORIOS -- */
+.relatParam {
+	float: left;
+}
+.relatParam button {
+	border: 0;
+	background-color: #ececec;
+	margin: 0;
+	padding: 0;
+}
+
+/* --- FOOTER --- */
+
+.footer {
+    float: left;
+    width: 100%;
+    padding: 3px 0;
+    border-top: 3px solid #d0d0d0;
+    border-bottom: 1px dotted #d0d0d0;
+    background-color: #ececec;
+}
+.footer ul {
+	list-style-type: square;
+	margin: 0 15px;
+	padding: 0;
+}
