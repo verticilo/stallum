@@ -7,10 +7,6 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
-
 	<dependencies>
 		<dependency>
 			<groupId>br.com.caelum</groupId>
@@ -194,9 +190,9 @@
 					<groupId>com.fasterxml.jackson.core</groupId>
 				</exclusion>
 				<exclusion>
-                                        <artifactId>itext</artifactId>
-                                        <groupId>com.lowagie</groupId>
-                                </exclusion>
+					<artifactId>itext</artifactId>
+					<groupId>com.lowagie</groupId>
+				</exclusion>
 			</exclusions>
 		</dependency>
 		<dependency>
@@ -228,7 +224,6 @@
 	</dependencies>
 
 	<build>
-		<outputDirectory>${basedir}/src/main/webapp/WEB-INF/classes</outputDirectory>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
