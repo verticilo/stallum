@@ -7,8 +7,6 @@ import java.io.IOException;
 import java.util.Date;
 
 import javax.mail.MessagingException;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.mail.EmailException;
@@ -22,7 +20,6 @@ import stallum.dto.OrdenacaoUsuario;
 import stallum.dto.Paginacao;
 import stallum.enums.Estado;
 import stallum.enums.PerfilUsuario;
-import stallum.infra.SessaoInterceptor;
 import stallum.infra.SessaoUsuario;
 import stallum.infra.Util;
 import stallum.modelo.Usuario;
@@ -48,13 +45,11 @@ public class UsuariosController extends AbstractController {
 	private final String PREFIXO_TOKEN = "STL-20130207";
 	private final String IMG_PERFIL = "IMG_PERF_";
 	private final String TBN_PERFIL = "TBN_PERF_";
-	private final HttpServletResponse response;
 
 	public UsuariosController(UsuarioDao dao, Validator validator, Localization i18n, 
-			HttpServletResponse response, Result result, SessaoUsuario sessao) {
+			Result result, SessaoUsuario sessao) {
 		super(validator, i18n, result, sessao);
 		this.dao = dao;
-		this.response = response;
 		
 		dirPerfil = new File(getConfig("config.dir.perfil"));
 		if (!dirPerfil.isDirectory())
@@ -325,13 +320,6 @@ public class UsuariosController extends AbstractController {
 	
 			sessao.login(usuarioValido);
 			
-			Cookie cookie = new Cookie(SessaoInterceptor.COOKIE_USUARIO, Util.encripta(usuario.getSenha()) + "," + usuarioValido.getId());
-			if (Boolean.TRUE.equals(usuario.getLembrar()))
-				cookie.setMaxAge(7 * 24 * 60 * 60);
-			else
-				cookie.setMaxAge(0); // Apaga o cookie
-			response.addCookie(cookie);
-			
 			// Verifica se a confirmacao de e-mail ainda nao foi feita
 			if (usuarioValido.getConfirmacaoEmail() != 1L) {
 				long difDias = Util.diferencaDias(new Date(usuarioValido.getConfirmacaoEmail()), new Date());
@@ -367,9 +355,6 @@ public class UsuariosController extends AbstractController {
 	@Path("/logout")
 	public void logout() {
 		sessao.logout();
-		Cookie cookie = new Cookie(SessaoInterceptor.COOKIE_USUARIO, "#");
-		cookie.setMaxAge(0); // Apaga o cookie
-		response.addCookie(cookie);
 		result.redirectTo("/");
 	}
 	

@@ -113,7 +113,7 @@ public class Empresa extends AbstractModelo {
 	}
 
 	public Boolean getAtiva() {
-		return ativa;
+		return !Boolean.FALSE.equals(ativa);
 	}
 
 	public void setAtiva(Boolean ativa) {
