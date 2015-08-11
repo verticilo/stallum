@@ -639,15 +639,17 @@ public class ApontamentosController extends AbstractController {
 		for (Funcionario funcionario: funcionariosAtivos) {
 			Ponto ponto = new Ponto();
 			ponto.setFuncionario(funcionario);
-			marcarOcorrencia(ponto);
 			ponto.setPresente(apont.getPontos().contains(ponto));
 			if (ponto.getPresente()) {
 				Ponto pontoCopiado = pontosApontamento.get(pontosApontamento.indexOf(ponto));
 				if (copia)
 					pontoCopiado.setId(null);
+				pontoCopiado.setFuncionario(funcionario);
 				pontoCopiado.setPresente(true);
+				marcarOcorrencia(pontoCopiado);
 				pontosCopiados.add(pontoCopiado);
 			} else if (!pontosLancados.contains(ponto)) {
+				marcarOcorrencia(ponto);
 				pontosNaoLancados.add(ponto);
 			}
 		}
